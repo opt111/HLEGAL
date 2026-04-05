@@ -1,0 +1,57 @@
+@use "./variables.scss" as *;
+
+@mixin h1 {
+  background-image: $redtext-gradient-color;
+  background-clip: text;
+  color: transparent;
+  font-weight: 700;
+  font-size: 38px;
+  line-height: 100%;
+  letter-spacing: 0%;
+}
+
+@mixin page-name {
+  color: $main-color;
+  font-family: $ff;
+  font-weight: 400;
+  font-size: 36px;
+  line-height: 100%;
+  letter-spacing: 0%;
+  align-self: center;
+  margin-bottom: 13px;
+}
+
+@mixin link {
+  font-family: $ff;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20px;
+  text-decoration: none;
+  color: $active-regular-color;
+
+  &:hover {
+    color: $accent-color;
+  }
+}
+
+@mixin header-right-top {
+  font-family: $ff;
+  color: $text-gray-color;
+  font-weight: 700;
+  font-size: 1rem;
+  line-height: 100%;
+  letter-spacing: 1px;
+  text-align: center;
+  transition: all 0.3s linear;
+}
+
+@mixin circle {
+  width: 6px;
+  height: 6px;
+  opacity: 1;
+  border-radius: 50%;
+  background-color: $separator-gray-color;
+  align-self: center;
+  margin-inline: 6px;
+}
+
