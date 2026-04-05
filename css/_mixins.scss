@@ -7,7 +7,71 @@
   font-weight: 700;
   font-size: 38px;
   line-height: 100%;
-  letter-spacing: 0%;
+}
+
+@mixin h2 {
+  font-family: $ff;
+  color: $main-color;
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 100%;
+}
+
+@mixin h3 {
+  font-family: $ff;
+  color: $main-color;
+  font-weight: 700;
+  font-size: 22px;
+  line-height: 100%;
+}
+
+@mixin h3-caps {
+  font-family: $ff;
+  color: $main-color;
+  font-weight: 700;
+  line-height: 100%;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+@mixin h4 {
+  font-family: $ff;
+  color: $main-color;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 100%;
+}
+
+@mixin p {
+  font-family: $ff;
+  color: $main-color;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 26px;
+  margin: 0;
+  padding: 0;
+}
+
+@mixin ul {
+  font-family: $ff;
+  color: black;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 26px;
+  li::marker {
+    color: $accent-color;
+  }
+}
+
+@mixin ol {
+  font-family: $ff;
+  color: black;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 26px;
+  li::marker {
+    color: $accent-color;
+  }
 }
 
 @mixin page-name {
@@ -54,4 +118,3 @@
   align-self: center;
   margin-inline: 6px;
 }
-

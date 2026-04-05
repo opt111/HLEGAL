@@ -1,26 +1,71 @@
 @use "./variables.scss" as *;
 @use "./mixins.scss" as mixin;
 
-:root {
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
+
+body {
+  min-height: 100vh;
+}
+
+
 a {
   @include mixin.link;
+  transition: all 0.3s linear;
+}
+
+p {
+  @include mixin.p;
+}
+
+h1 {
+  @include mixin.h1;
+  margin: 0;
+  padding: 0;
+}
+
+h2 {
+  @include mixin.h2;
+  margin: 0;
+  padding: 0;
+}
+
+h3 {
+  @include mixin.h3;
+  margin: 0;
+  padding: 0;
+}
+
+h4 {
+  @include mixin.h4;
+  margin: 0;
+  padding: 0;
+}
+
+ol {
+  @include mixin.ol;
+}
+
+ul {
+  @include mixin.ul;
 }
 
 .container-short {
   max-width: $container-short-width;
   margin: 0 auto;
+  width: 100%;
+  padding: 0 5vw;
 }
 
 .container {
   padding: 0 5vw;
   max-width: $container-width;
   margin: 0 auto;
-
+  width: 100%;
 }
 
 .header {
@@ -60,6 +105,18 @@ a {
           @include mixin.header-right-top;
           padding: 5px 7px;
           font-size: 13px;
+
+          &:not(.header-right__top__languages__item-active):hover {
+            cursor: pointer;
+            background-color: #e3e3e3;
+            border-radius: 8px;
+          }
+
+          &-active {
+            background-color: $accent-color;
+            color: white;
+            border-radius: 8px;
+          }
         }
       }
 
@@ -129,7 +186,313 @@ a {
   }
 }
 
+.form__section {
+  margin-top: 60px;
+  display: flex;
+  gap: 60px;
+  padding-bottom: 60px;
 
-// h1 {
-//   @include mixin.h1;
-// }
+  &__left {
+    display: flex;
+    flex-direction: column;
+    max-width: 50%;
+    width: 100%;
+    position: relative;
+
+    &__our-page {
+      display: flex;
+      width: max-content;
+
+      &-svg {
+
+        svg {
+          height: 38px;
+          width: 38px;
+
+          path {
+            transition: all 0.3s linear;
+          }
+        }
+
+        &:hover svg path,
+        &-text {
+          fill: $accent-color;
+
+        }
+
+        .form__section__left__our-page-text {
+          position: absolute;
+          top: 244px;
+          left: 50px;
+          transition: all 0.3s linear;
+        }
+
+        &:hover .form__section__left__our-page-text {
+          color: $accent-color;
+
+        }
+      }
+
+      &-text {
+        font-family: $ff;
+        font-weight: 700;
+        font-size: 12px;
+        line-height: 16px;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+      }
+    }
+
+    &__address {
+
+      &::after {
+        margin-top: 30px;
+        display: flex;
+        content: '';
+        width: 100%;
+        height: 4px;
+        background-color: $separator-gray-color;
+        margin-bottom: 30px;
+      }
+    }
+
+    &__phone {
+      margin-bottom: 15px;
+    }
+
+    &__mail {
+      &::after {
+        margin-top: 30px;
+        display: flex;
+        content: '';
+        width: 100%;
+        height: 4px;
+        background-color: $separator-gray-color;
+        margin-bottom: 30px;
+      }
+
+      span {
+        width: max-content;
+      }
+
+    }
+  }
+
+  &__right {
+    max-width: 50%;
+    width: 100%;
+
+    &__form {
+      input:focus {
+        outline-color: $active-regular-color;
+      }
+
+      input:user-invalid  {
+        outline-color:#FF0000;
+      }
+
+      &__message {
+        border: none;
+        border-radius: 8px;
+        padding-inline: 15px;
+        min-height: 130px;
+
+      }
+
+      textarea {
+        padding-top: 20px;
+        resize: none;
+
+        &::placeholder {
+          font-family: $ff;
+          font-weight: 400;
+          font-size: 14px;
+          line-height: 26px;
+          color: $text-gray-color;
+        }
+      }
+
+      textarea:focus {
+        outline-color: $active-regular-color;
+      }
+
+      &__message::placeholder {
+        position: absolute;
+        top: 15px;
+        left: 15px;
+      }
+
+      input:not(.form__section__right__form__message) {
+        border: none;
+        border-radius: 8px;
+        min-height: 56px;
+        padding-inline: 15px;
+      }
+
+      input::placeholder {
+        color: $text-gray-color;
+
+      }
+
+      background-color: $bg-gray-color;
+      max-width: 650px;
+      padding: 30px;
+
+      &__title {
+        font-family: $ff;
+        margin-bottom: 30px;
+        font-weight: 700;
+        font-size: 30px;
+      }
+
+      &__first-group {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        margin-bottom: 30px;
+      }
+
+
+
+      &__second-group {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        margin-bottom: 30px;
+      }
+
+      &__second-group-title {
+        margin-bottom: 15px;
+      }
+
+      &__second-group-title {
+        color: $text-gray-color;
+        font-family: $ff;
+        font-weight: 700;
+        font-size: 14px;
+        line-height: 100%;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+      }
+
+      &__submit {
+        width: 100%;
+        background-color: $active-regular-color;
+        font-family: $ff;
+        font-weight: 700;
+        font-size: 16px;
+        text-align: center;
+        color: white;
+        box-shadow: 0px 0px 20px 0px #24A3FF80;
+        transition: all 0.3s linear;
+
+        &:hover {
+          cursor: pointer;
+          background-color: $active-hover-color;
+        }
+      }
+    }
+  }
+}
+
+.footer {
+  background-color: $bg-gray-color;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  padding-inline: 80px;
+  font-family: $ff;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+
+  &__left {
+
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+
+    &__top {
+      display: flex;
+      flex-direction: row;
+      gap: 10px;
+      align-items: center;
+
+      &__address {
+        color: $main-color;
+        font-weight: 400;
+        font-size: 16px;
+
+        &__link {
+          font-weight: 700;
+          font-size: 12px;
+          line-height: 100%;
+          letter-spacing: 1px;
+          text-transform: uppercase;
+        }
+
+      }
+    }
+
+    &__bottom {
+
+      display: flex;
+      align-items: center;
+      gap: 10px;
+
+      &__number {
+        font-weight: 700;
+        font-style: Bold;
+        font-size: 16px;
+        line-height: 100%;
+        letter-spacing: 0%;
+        text-align: right;
+      }
+
+      &__email {
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 100%;
+      }
+
+      &__facebook {
+        &__link {
+          svg {
+            height: 38px;
+            width: 38px;
+
+            path {
+              transition: all 0.2s linear;
+            }
+          }
+
+          &:hover svg {
+            path {
+              fill: $active-regular-color;
+            }
+          }
+
+        }
+      }
+    }
+
+
+  }
+
+  &__right {
+    &__sign {
+      font-weight: 400;
+      font-size: 16px;
+      text-align: right;
+      color: $text-gray-color
+    }
+  }
+
+  .qwe {
+    @include mixin.circle;
+    background-color: $text-gray-color;
+    display: inline-block;
+    margin-inline: 0px;
+  }
+
+}
