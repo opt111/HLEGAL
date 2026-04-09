@@ -222,6 +222,7 @@ ul li::marker {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 60px;
+  padding-bottom: 2rem;
 }
 @media (max-width: 1150px) {
   .services__hero__section__info__cards {

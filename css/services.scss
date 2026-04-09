@@ -193,7 +193,7 @@ ul {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
       gap: 60px;
-
+      padding-bottom: 2rem;
       @media (max-width:1150px) {
         padding-bottom: 3rem;
       }
