@@ -137,6 +137,10 @@ ul li::marker {
   width: 100%;
 }
 
+.-header {
+  padding-top: 50px;
+}
+
 .container.wide {
   max-width: calc(1600px + var(--basic-space) * 2);
   padding-top: 50px;
@@ -842,6 +846,19 @@ footer .container {
   color: #F0145A;
   cursor: pointer;
 }
+.recommended__section__publication:hover svg path {
+  stroke: #F0145A;
+  cursor: pointer;
+}
+.recommended__section__publication__sign {
+  max-width: -moz-max-content;
+  max-width: max-content;
+  width: 12px;
+  height: 17px;
+}
+.recommended__section__publication__sign path {
+  transition: all 0.3s linear;
+}
 .recommended__section__title {
   margin-bottom: 30px;
 }
@@ -913,4 +930,164 @@ footer .container {
   color: #000000;
   display: flex;
   flex-wrap: wrap;
+}
+
+.form__popup {
+  display: flex;
+  position: fixed;
+  align-items: center;
+  justify-content: center;
+  padding: var(--basic-space);
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #323264;
+  transition: all 0.3s linear;
+  opacity: 0;
+  transform: translatey(100%);
+}
+.form__popup .form__section__right__form {
+  position: relative;
+  width: 650px;
+  align-items: center;
+  justify-content: center;
+  border-radius: 12px;
+  background-color: #F5F5FA;
+  max-width: 650px;
+  padding: 30px;
+}
+@media (max-width: 850px) {
+  .form__popup .form__section__right__form {
+    max-width: 100%;
+    width: 100%;
+    margin-inline: auto;
+  }
+}
+.form__popup .form__section__right__form input:focus {
+  outline-color: #24A3FF;
+}
+.form__popup .form__section__right__form input:user-invalid {
+  outline-color: #FF0000;
+}
+.form__popup .form__section__right__form__close {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  width: 20px;
+  height: 20px;
+}
+.form__popup .form__section__right__form__close:hover {
+  cursor: pointer;
+}
+.form__popup .form__section__right__form__message {
+  border: none;
+  border-radius: 8px;
+  padding-inline: 15px;
+  min-height: 130px;
+}
+.form__popup .form__section__right__form textarea {
+  padding-top: 20px;
+  resize: none;
+}
+.form__popup .form__section__right__form textarea::-moz-placeholder {
+  font-family: Montserrat, sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 26px;
+  color: #B3B3BA;
+}
+.form__popup .form__section__right__form textarea::placeholder {
+  font-family: Montserrat, sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 26px;
+  color: #B3B3BA;
+}
+.form__popup .form__section__right__form textarea:focus {
+  outline-color: #24A3FF;
+}
+.form__popup .form__section__right__form__message::-moz-placeholder {
+  position: absolute;
+  top: 15px;
+  left: 15px;
+}
+.form__popup .form__section__right__form__message::placeholder {
+  position: absolute;
+  top: 15px;
+  left: 15px;
+}
+.form__popup .form__section__right__form input:not(.form__section__right__form__message) {
+  border: none;
+  border-radius: 8px;
+  min-height: 56px;
+  padding-inline: 15px;
+}
+.form__popup .form__section__right__form input::-moz-placeholder {
+  color: #B3B3BA;
+}
+.form__popup .form__section__right__form input::placeholder {
+  color: #B3B3BA;
+}
+.form__popup .form__section__right__form__title {
+  font-family: Montserrat, sans-serif;
+  margin-bottom: 30px;
+  font-weight: 700;
+  font-size: 30px;
+}
+.form__popup .form__section__right__form__first-group {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-bottom: 30px;
+}
+.form__popup .form__section__right__form__second-group {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-bottom: 30px;
+}
+.form__popup .form__section__right__form__second-group-title {
+  margin-bottom: 15px;
+}
+.form__popup .form__section__right__form__second-group-title {
+  color: #B3B3BA;
+  font-family: Montserrat, sans-serif;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 100%;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+.form__popup .form__section__right__form__submit {
+  width: 100%;
+  background-color: #24A3FF;
+  font-family: Montserrat, sans-serif;
+  font-weight: 700;
+  font-size: 16px;
+  text-align: center;
+  color: white;
+  box-shadow: 0px 0px 20px 0px rgba(36, 163, 255, 0.5019607843);
+  transition: all 0.3s linear;
+}
+.form__popup .form__section__right__form__submit:hover {
+  cursor: pointer;
+  background-color: #0085FF;
+}
+
+.popup-active {
+  transform: translatey(0%);
+  opacity: 1;
+  display: flex;
+}
+
+@media print {
+  header {
+    position: fixed;
+    top: 0;
+  }
+  footer {
+    position: fixed;
+    bottom: 0;
+  }
 }/*# sourceMappingURL=services.css.map */

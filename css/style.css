@@ -217,7 +217,7 @@ ul li::marker {
 @media (max-width: 560px) {
   .header .header-right__top {
     margin-bottom: 15px;
-    width: 100vw;
+    width: 98vw;
     position: relative;
     left: 50%;
     right: 50%;
@@ -358,7 +358,7 @@ ul li::marker {
   .header .header-right__links {
     transform: translateX(100%);
     transition: all 0.5s ease-in-out;
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
     flex-direction: column;
@@ -603,6 +603,31 @@ ul li::marker {
   display: flex;
   justify-content: space-between;
 }
+@media (max-width: 1780px) {
+  .footer {
+    padding-inline: 0px;
+  }
+}
+@media (max-width: 850px) {
+  .footer .container {
+    padding-inline: 0;
+  }
+}
+@media (max-width: 590px) {
+  .footer {
+    padding-inline: 40px;
+  }
+}
+.footer__right__sign {
+  font-weight: 400;
+  font-size: 16px;
+  text-align: right;
+  color: #B3B3BA;
+}
+.footer__wrap {
+  display: flex;
+  justify-content: space-between;
+}
 .footer__wrap__left {
   display: flex;
   flex-direction: column;
@@ -664,12 +689,6 @@ ul li::marker {
     flex-direction: column;
   }
 }
-.footer__wrap__right__sign {
-  font-weight: 400;
-  font-size: 16px;
-  text-align: right;
-  color: #B3B3BA;
-}
 .footer__wrap .qwe {
   width: 6px;
   height: 6px;
@@ -689,6 +708,7 @@ ul li::marker {
 }
 @media (max-width: 850px) {
   .footer__wrap {
+    display: flex;
     flex-direction: column;
     align-items: center;
     gap: 30px;
@@ -698,4 +718,111 @@ ul li::marker {
   .footer__wrap {
     padding-inline: 40px;
   }
+}
+@media (max-width: 560px) {
+  .footer__wrap {
+    padding: 0px;
+  }
+}
+
+.team__section .container {
+  padding-inline: 20px;
+}
+.team__section {
+  box-sizing: border-box;
+}
+.team__section__wrap__title {
+  margin-top: 60px;
+  margin-bottom: 60px;
+}
+@media (max-width: 560px) {
+  .team__section__wrap__title {
+    margin-top: 0px;
+  }
+}
+.team__section__wrap__cards {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(300px, 1fr));
+  align-items: start;
+  gap: 3.75rem;
+  justify-content: center;
+  width: 100%;
+  margin-bottom: 60px;
+}
+@media (max-width: 1200px) {
+  .team__section__wrap__cards {
+    grid-template-columns: repeat(2, minmax(250px, 1fr));
+  }
+}
+@media (max-width: 768px) {
+  .team__section__wrap__cards {
+    grid-template-columns: 1fr;
+  }
+}
+.team__section__wrap__cards__card {
+  width: 100%;
+  max-width: 100%;
+  overflow: hidden;
+  transition: all 0.3s linear;
+  position: relative;
+}
+.team__section__wrap__cards__card:hover .team__section__wrap__cards__card__bot__text__name {
+  color: #F0145A;
+}
+.team__section__wrap__cards__card:hover {
+  transform: scale(1.01);
+}
+.team__section__wrap__cards__card:hover .team__section__wrap__cards__card__bot__sign__svg path {
+  stroke: #F0145A;
+  background-color: #EDEDF7;
+  padding: 25px;
+  border-radius: 50%;
+}
+.team__section__wrap__cards__card:hover .team__section__wrap__cards__card__bot__sign__svg {
+  background-color: #EDEDF7;
+  border-radius: 50%;
+}
+.team__section__wrap__cards__card__img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 4/4;
+  -o-object-fit: cover;
+     object-fit: cover;
+  margin-bottom: 15px;
+  max-width: 100%;
+  border-radius: 12px;
+}
+.team__section__wrap__cards__card__bot {
+  display: flex;
+  justify-content: space-between;
+}
+.team__section__wrap__cards__card__bot__text {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+.team__section__wrap__cards__card__bot__text__name {
+  transition: all 0.3s linear;
+}
+.team__section__wrap__cards__card__bot__text__role {
+  font-family: Montserrat, sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 22px;
+  color: #B3B3BA;
+}
+.team__section__wrap__cards__card__bot__sign__svg {
+  min-height: 42px;
+  min-width: 42px;
+  padding: 10px 12px;
+  border-radius: 50%;
+  display: flex;
+  align-self: center;
+  justify-content: center;
+}
+.team__section .footer {
+  padding-inline: 0px;
+}
+.team__section .footer .container.footer-container {
+  padding-inline: 0px;
 }/*# sourceMappingURL=style.css.map */

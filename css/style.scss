@@ -191,7 +191,7 @@ ul {
 
       @media (max-width:560px) {
         margin-bottom: 15px;
-        width: 100vw;
+        width: 98vw;
         position: relative;
         left: 50%;
         right: 50%;
@@ -339,7 +339,7 @@ ul {
       @media (max-width:560px) {
         transform: translateX(100%);
         transition: all 0.5s ease-in-out;
-        position: absolute;
+        position: fixed;
         top: 0;
         left: 0;
         flex-direction: column;
@@ -622,7 +622,34 @@ ul {
   display: flex;
   justify-content: space-between;
 
+  @media (max-width:1780px) {
+    padding-inline: 0px;
+  }
+
+
+  .container {
+    @media(max-width:850px) {
+      padding-inline: 0;
+    }
+  }
+
+  @media (max-width:590px) {
+    padding-inline: 40px;
+  }
+
+  &__right {
+    &__sign {
+      font-weight: 400;
+      font-size: 16px;
+      text-align: right;
+      color: $text-gray-color
+    }
+  }
+
   &__wrap {
+    display: flex;
+    justify-content: space-between;
+
     &__left {
 
       display: flex;
@@ -705,14 +732,7 @@ ul {
 
     }
 
-    &__right {
-      &__sign {
-        font-weight: 400;
-        font-size: 16px;
-        text-align: right;
-        color: $text-gray-color
-      }
-    }
+
 
     .qwe {
       @include mixin.circle;
@@ -726,6 +746,7 @@ ul {
     }
 
     @media (max-width:850px) {
+      display: flex;
       flex-direction: column;
       align-items: center;
       gap: 30px;
@@ -733,6 +754,139 @@ ul {
 
     @media (max-width:590px) {
       padding-inline: 40px;
+    }
+
+    @media(max-width:560px) {
+      padding: 0px;
+    }
+  }
+}
+
+// ----------------------TEAM----------------------  
+
+.team__section {
+  .container {
+    padding-inline: 20px;
+  }
+
+  box-sizing: border-box;
+
+  &__wrap {
+    &__title {
+      margin-top: 60px;
+      margin-bottom: 60px;
+
+      @media (max-width:560px) {
+        margin-top: 0px;
+      }
+    }
+
+    &__cards {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(300px, 1fr));
+      align-items: start;
+      gap: 3.75rem;
+      justify-content: center;
+      width: 100%;
+      margin-bottom: 60px;
+
+      @media (max-width: 1200px) {
+        grid-template-columns: repeat(2, minmax(250px, 1fr));
+      }
+
+      @media (max-width: 768px) {
+        grid-template-columns: 1fr;
+      }
+
+      &__card {
+
+
+        &__link {}
+
+        width: 100%;
+        max-width: 100%;
+        overflow: hidden;
+        transition: all 0.3s linear;
+        position: relative;
+
+        &:hover .team__section__wrap__cards__card__bot__text__name {
+          color: $accent-color;
+        }
+
+        &:hover {
+          transform: scale(1.01);
+        }
+
+        &:hover .team__section__wrap__cards__card__bot__sign__svg path {
+          stroke: $accent-color;
+          background-color: $bg-alt-gray-color;
+          padding: 25px;
+          border-radius: 50%;
+        }
+
+        &:hover .team__section__wrap__cards__card__bot__sign__svg {
+          background-color: $bg-alt-gray-color;
+
+          border-radius: 50%;
+        }
+
+        &__img {
+          display: block;
+          width: 100%;
+          aspect-ratio: 4 / 4;
+          object-fit: cover;
+          margin-bottom: 15px;
+          max-width: 100%;
+          border-radius: 12px;
+        }
+
+
+
+        &__bot {
+          display: flex;
+          justify-content: space-between;
+
+          &__text {
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+
+            &__name {
+              transition: all 0.3s linear;
+            }
+
+            &__role {
+              font-family: $ff;
+              font-weight: 400;
+              font-size: 14px;
+              line-height: 22px;
+              color: $text-gray-color;
+            }
+          }
+
+          &__sign {
+            &__svg {
+              min-height: 42px;
+              min-width: 42px;
+              padding: 10px 12px;
+              border-radius: 50%;
+              display: flex;
+              align-self: center;
+              justify-content: center;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .footer {
+    padding-inline: 0px;
+
+    .container.footer-container {
+
+      padding-inline: 0px;
+
     }
   }
 }

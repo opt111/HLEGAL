@@ -88,7 +88,9 @@ ul {
 
 }
 
-
+.-header {
+  padding-top: 50px;
+}
 
 
 .container.wide {
@@ -194,6 +196,7 @@ ul {
       grid-template-columns: repeat(3, 1fr);
       gap: 60px;
       padding-bottom: 2rem;
+
       @media (max-width:1150px) {
         padding-bottom: 3rem;
       }
@@ -720,9 +723,7 @@ footer {
 
 .header__service__entry {
   .logo-wrap {
-    @media (max-width: 560px) {
-    
-  }
+    @media (max-width: 560px) {}
   }
 
   .header-left_wrap .header-left__page-name {
@@ -929,7 +930,21 @@ footer {
       cursor: pointer;
     }
 
+    &:hover svg path {
+      stroke: $accent-color;
+      cursor: pointer;
+    }
 
+    &__sign {
+
+      max-width: max-content;
+      width: 12px;
+      height: 17px;
+
+      path {
+transition: all 0.3s linear;
+      }
+    }
   }
 
   &__title {
@@ -1017,3 +1032,174 @@ footer {
     }
   }
 }
+
+.form__popup {
+  display: flex;
+  position: fixed;
+  align-items: center;
+  justify-content: center;
+  padding: var(--basic-space);
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #323264;
+  transition: all 0.3s linear;
+  opacity: 0;
+  transform: translatey(100%);
+
+  .form__section__right__form {
+    position: relative;
+    width: 650px;
+    align-items: center;
+    justify-content: center;
+    border-radius: 12px;
+
+    background-color: $bg-gray-color;
+    max-width: 650px;
+    padding: 30px;
+
+    @media (max-width:850px) {
+      max-width: 100%;
+      width: 100%;
+      margin-inline: auto;
+    }
+
+    input:focus {
+      outline-color: $active-regular-color;
+    }
+
+    input:user-invalid {
+      outline-color: #FF0000;
+    }
+
+    &__close {
+      position: absolute;
+      top: 15px;
+      right: 15px;
+      width: 20px;
+      height: 20px;
+
+      &:hover {
+        cursor: pointer;
+      }
+    }
+
+    &__message {
+      border: none;
+      border-radius: 8px;
+      padding-inline: 15px;
+      min-height: 130px;
+
+    }
+
+    textarea {
+      padding-top: 20px;
+      resize: none;
+
+      &::placeholder {
+        font-family: $ff;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 26px;
+        color: $text-gray-color;
+      }
+    }
+
+    textarea:focus {
+      outline-color: $active-regular-color;
+    }
+
+    &__message::placeholder {
+      position: absolute;
+      top: 15px;
+      left: 15px;
+    }
+
+    input:not(.form__section__right__form__message) {
+      border: none;
+      border-radius: 8px;
+      min-height: 56px;
+      padding-inline: 15px;
+    }
+
+    input::placeholder {
+      color: $text-gray-color;
+
+    }
+
+
+    &__title {
+      font-family: $ff;
+      margin-bottom: 30px;
+      font-weight: 700;
+      font-size: 30px;
+    }
+
+    &__first-group {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+      margin-bottom: 30px;
+    }
+
+
+
+    &__second-group {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+      margin-bottom: 30px;
+    }
+
+    &__second-group-title {
+      margin-bottom: 15px;
+    }
+
+    &__second-group-title {
+      color: $text-gray-color;
+      font-family: $ff;
+      font-weight: 700;
+      font-size: 14px;
+      line-height: 100%;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+    }
+
+    &__submit {
+      width: 100%;
+      background-color: $active-regular-color;
+      font-family: $ff;
+      font-weight: 700;
+      font-size: 16px;
+      text-align: center;
+      color: white;
+      box-shadow: 0px 0px 20px 0px #24A3FF80;
+      transition: all 0.3s linear;
+
+      &:hover {
+        cursor: pointer;
+        background-color: $active-hover-color;
+      }
+    }
+  }
+}
+
+.popup-active {
+  transform: translatey(0%);
+  opacity: 1;
+  display: flex;
+}
+
+@media print {
+  header {
+    position: fixed;
+    top: 0;
+  }
+
+  footer {
+    position: fixed;
+    bottom: 0;
+  }
+}
+
