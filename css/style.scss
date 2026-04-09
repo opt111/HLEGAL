@@ -9,18 +9,23 @@
   box-sizing: border-box;
 }
 
-html,
-body {
-  margin: 0;
-  height: 100%;
-  overflow-x: hidden;
-}
+// html,
+// body {
+//   margin: 0;
+//   height: 100%;
+//   overflow-x: hidden;
+// }
 
 body {
   min-height: 100vh;
   position: relative;
+  display: flex;
+  flex-direction: column;
 }
 
+main {
+  flex: 1;
+}
 
 a {
   @include mixin.link;
@@ -68,13 +73,9 @@ ul {
   margin: 0 auto;
   width: 100%;
 
-  @media (max-width:1440px) {
-    max-width: 1080px;
-  }
+  @media (max-width:1440px) {}
 
-  @media (max-width:1024px) {
-    max-width: 904px;
-  }
+  @media (max-width:1024px) {}
 }
 
 
@@ -85,13 +86,9 @@ ul {
   margin: 0 auto;
   width: 100%;
 
-  @media (max-width:1440px) {
-    max-width: 1320px;
-  }
+  @media (max-width:1440px) {}
 
-  @media (max-width:1024px) {
-    max-width: 904px;
-  }
+  @media (max-width:1024px) {}
 }
 
 .logo-wrap {
@@ -164,15 +161,6 @@ ul {
     .header-left__page-name {
       @include mixin.page-name;
 
-      // @media (max-width: 850px) {
-      //   position: absolute;
-      //   top: 110px;
-      // }
-
-      // @media (max-width: 560px) {
-      //   position: absolute;
-      //   top: 62px;
-      // }
     }
 
 
@@ -205,7 +193,7 @@ ul {
         margin-bottom: 15px;
         width: 100vw;
         position: relative;
-        left: 49%;
+        left: 50%;
         right: 50%;
         margin-left: -50vw;
         margin-right: -50vw;
@@ -634,115 +622,117 @@ ul {
   display: flex;
   justify-content: space-between;
 
-  &__left {
+  &__wrap {
+    &__left {
 
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-
-
-    &__top {
       display: flex;
-      flex-direction: row;
-      gap: 10px;
-      align-items: center;
+      flex-direction: column;
+      gap: 20px;
 
-      &__address {
-        color: $main-color;
+
+      &__top {
+        display: flex;
+        flex-direction: row;
+        gap: 10px;
+        align-items: center;
+
+        &__address {
+          color: $main-color;
+          font-weight: 400;
+          font-size: 16px;
+
+          &__link {
+            font-weight: 700;
+            font-size: 12px;
+            line-height: 100%;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+          }
+
+        }
+
+        @media (max-width:560px) {
+          flex-direction: column;
+        }
+      }
+
+      &__bottom {
+
+        display: flex;
+        align-items: center;
+        gap: 10px;
+
+        &__number {
+          font-weight: 700;
+          font-style: Bold;
+          font-size: 16px;
+          line-height: 100%;
+          letter-spacing: 0%;
+          text-align: right;
+        }
+
+        &__email {
+          font-weight: 700;
+          font-size: 16px;
+          line-height: 100%;
+        }
+
+        &__facebook {
+          &__link {
+            svg {
+              height: 38px;
+              width: 38px;
+
+              path {
+                transition: all 0.2s linear;
+              }
+            }
+
+            &:hover svg {
+              path {
+                fill: $accent-color;
+              }
+            }
+
+          }
+        }
+
+        @media (max-width:560px) {
+          flex-direction: column;
+        }
+      }
+
+
+    }
+
+    &__right {
+      &__sign {
         font-weight: 400;
         font-size: 16px;
-
-        &__link {
-          font-weight: 700;
-          font-size: 12px;
-          line-height: 100%;
-          letter-spacing: 1px;
-          text-transform: uppercase;
-        }
-
-      }
-
-      @media (max-width:560px) {
-        flex-direction: column;
-      }
-    }
-
-    &__bottom {
-
-      display: flex;
-      align-items: center;
-      gap: 10px;
-
-      &__number {
-        font-weight: 700;
-        font-style: Bold;
-        font-size: 16px;
-        line-height: 100%;
-        letter-spacing: 0%;
         text-align: right;
+        color: $text-gray-color
       }
+    }
 
-      &__email {
-        font-weight: 700;
-        font-size: 16px;
-        line-height: 100%;
-      }
-
-      &__facebook {
-        &__link {
-          svg {
-            height: 38px;
-            width: 38px;
-
-            path {
-              transition: all 0.2s linear;
-            }
-          }
-
-          &:hover svg {
-            path {
-              fill: $accent-color;
-            }
-          }
-
-        }
-      }
+    .qwe {
+      @include mixin.circle;
+      background-color: $text-gray-color;
+      display: inline-block;
+      margin-inline: 0px;
 
       @media (max-width:560px) {
-        flex-direction: column;
+        display: none;
       }
     }
 
-
-  }
-
-  &__right {
-    &__sign {
-      font-weight: 400;
-      font-size: 16px;
-      text-align: right;
-      color: $text-gray-color
+    @media (max-width:850px) {
+      flex-direction: column;
+      align-items: center;
+      gap: 30px;
     }
-  }
 
-  .qwe {
-    @include mixin.circle;
-    background-color: $text-gray-color;
-    display: inline-block;
-    margin-inline: 0px;
-
-    @media (max-width:560px) {
-      display: none;
+    @media (max-width:590px) {
+      padding-inline: 40px;
     }
-  }
-
-  @media (max-width:850px) {
-    flex-direction: column;
-    align-items: center;
-    gap: 30px;
-  }
-
-  @media (max-width:590px) {
-    padding-inline: 40px;
   }
 }

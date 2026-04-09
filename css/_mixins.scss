@@ -2,6 +2,7 @@
 
 @mixin h1 {
   background-image: $redtext-gradient-color;
+  font-family: $ff;
   background-clip: text;
   color: transparent;
   font-weight: 700;
