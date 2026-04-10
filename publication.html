@@ -97,12 +97,13 @@
 
             <label class="publication__section__wraper__slide__switch">
 
-              <input type="radio" id="option1" name="myGroup" value="1" checked>
+              <input class="radio" type="radio" id="option1" action="" name="myGroup" value="1" checked
+                onchange="radio()">
 
               <label for="option1" class="publication__section__wraper__slide__switch__text">
                 <span class="publication__section__wraper__slide__switch__text__bg">news</span></label>
 
-              <input type="radio" id="option2" name="myGroup" value="2">
+              <input class="radio" type="radio" id="option2" name="myGroup" value="2" onchange="radio()">
 
               <label for="option2" class="publication__section__wraper__slide__switch__text">
                 <span class="publication__section__wraper__slide__switch__text__bg">articles</span>
@@ -111,17 +112,13 @@
 
             </label>
 
-            <label class="publication__section__wraper__slide__switch">
-
-            </label>
 
           </div>
 
-          <div class="publication__section__wraper__cards">
+          <div class="publication__section__wraper__cards cards1" id="cards">
             <div class="publication__section__wraper__cards__card">
 
-              <img class="publication__section__wraper__cards__card__img" src="images/Publication-1.jpg"
-                alt="">
+              <img class="publication__section__wraper__cards__card__img" src="images/Publication-1.jpg" alt="">
 
               <div class="publication__section__wraper__cards__card__wrap">
                 <h4 class="publication__section__wraper__cards__card__title">Equity associate</h4>
@@ -137,85 +134,199 @@
 
             <div class="publication__section__wraper__cards__card">
 
-              <img class="publication__section__wraper__cards__card__img" src="images/Publication-2.jpg"
-                alt="">
+              <img class="publication__section__wraper__cards__card__img" src="images/Publication-2.jpg" alt="">
 
               <div class="publication__section__wraper__cards__card__wrap">
-                <h4 class="publication__section__wraper__cards__card__title">Penalty for the Good Corporation: what will happen to Google and others for violating the GDPR</h4>
+                <h4 class="publication__section__wraper__cards__card__title">Penalty for the Good Corporation: what will
+                  happen to Google and others for violating the GDPR</h4>
 
                 <p class="publication__section__wraper__cards__card__data">September 29</p>
 
-                <p class="publication__section__wraper__cards__card__description">And why the recovery of 50 million euros could be a fateful precedent According to Mind.ua January 21 National Commission for Data Protection.</p>
+                <p class="publication__section__wraper__cards__card__description">And why the recovery of 50 million
+                  euros could be a fateful precedent According to Mind.ua January 21 National Commission for Data
+                  Protection.</p>
 
               </div>
             </div>
 
             <div class="publication__section__wraper__cards__card">
 
-              <img class="publication__section__wraper__cards__card__img" src="images/Publication-3.jpg"
-                alt="">
+              <img class="publication__section__wraper__cards__card__img" src="images/Publication-3.jpg" alt="">
 
               <div class="publication__section__wraper__cards__card__wrap">
                 <h4 class="publication__section__wraper__cards__card__title">Millennial Testament</h4>
 
                 <p class="publication__section__wraper__cards__card__data">August 19</p>
 
-                <p class="publication__section__wraper__cards__card__description">What and how modern vloggers, opinion leaders and crypto-millionaires will inherit A typical legacy of the Ukrainian generation X looks like this: an apartment in…</p>
+                <p class="publication__section__wraper__cards__card__description">What and how modern vloggers, opinion
+                  leaders and crypto-millionaires will inherit A typical legacy of the Ukrainian generation X looks like
+                  this: an apartment in…</p>
 
               </div>
             </div>
 
             <div class="publication__section__wraper__cards__card">
 
-              <img class="publication__section__wraper__cards__card__img" src="images/Publication-4.jpg"
-                alt="">
+              <img class="publication__section__wraper__cards__card__img" src="images/Publication-4.jpg" alt="">
 
               <div class="publication__section__wraper__cards__card__wrap">
-                <h4 class="publication__section__wraper__cards__card__title">Language Law: How to Make Your Website Relevant</h4>
+                <h4 class="publication__section__wraper__cards__card__title">Language Law: How to Make Your Website
+                  Relevant</h4>
 
                 <p class="publication__section__wraper__cards__card__data">August 19</p>
 
-                <p class="publication__section__wraper__cards__card__description">Natalia Kyryk, head of content studio Wordfactory.ua First, it's beautiful! This is the number one argument in favor of the Ukrainian-language site. Secondly, it is effective. IN…</p>
+                <p class="publication__section__wraper__cards__card__description">Natalia Kyryk, head of content studio
+                  Wordfactory.ua First, it's beautiful! This is the number one argument in favor of the
+                  Ukrainian-language site. Secondly, it is effective. IN…</p>
 
               </div>
             </div>
 
             <div class="publication__section__wraper__cards__card">
 
-              <img class="publication__section__wraper__cards__card__img" src="images/Publication-5.jpg"
-                alt="">
+              <img class="publication__section__wraper__cards__card__img" src="images/Publication-5.jpg" alt="">
 
               <div class="publication__section__wraper__cards__card__wrap">
-                <h4 class="publication__section__wraper__cards__card__title">Reimbursement of the child's tuition fees in kindergarten and school</h4>
+                <h4 class="publication__section__wraper__cards__card__title">Reimbursement of the child's tuition fees
+                  in kindergarten and school</h4>
 
                 <p class="publication__section__wraper__cards__card__data">February 5, 2018</p>
 
-                <p class="publication__section__wraper__cards__card__description">What we are talking about In June this year, the Verkhovna Rada amended the Tax Code of Ukraine. From now on, parents who receive an official…</p>
+                <p class="publication__section__wraper__cards__card__description">What we are talking about In June this
+                  year, the Verkhovna Rada amended the Tax Code of Ukraine. From now on, parents who receive an
+                  official…</p>
 
               </div>
             </div>
 
             <div class="publication__section__wraper__cards__card">
 
-              <img class="publication__section__wraper__cards__card__img" src=""
-                alt="">
+              <img class="publication__section__wraper__cards__card__img" src="" alt="">
 
               <div class="publication__section__wraper__cards__card__wrap">
-                <h4 class="publication__section__wraper__cards__card__title">Currency control is dead, long live currency control!</h4>
+                <h4 class="publication__section__wraper__cards__card__title">Currency control is dead, long live
+                  currency control!</h4>
 
                 <p class="publication__section__wraper__cards__card__data">June 14, 2018</p>
 
-                <p class="publication__section__wraper__cards__card__description">Experts hold conferences, round tables and other events on "liberalization of currency legislation." Lawyers-experts-novelists rub their fingers about "ctrl + c / ctrl + v".</p>
+                <p class="publication__section__wraper__cards__card__description">Experts hold conferences, round tables
+                  and other events on "liberalization of currency legislation." Lawyers-experts-novelists rub their
+                  fingers about "ctrl + c / ctrl + v".</p>
 
               </div>
             </div>
           </div>
 
+          <div class="publication__section__wraper__cards cards2" id="cards2">
+            <div class="publication__section__wraper__cards__card">
+
+              <img class="publication__section__wraper__cards__card__img" src="images/Publication-1.jpg" alt="">
+
+              <div class="publication__section__wraper__cards__card__wrap">
+                <h4 class="publication__section__wraper__cards__card__title">Equity associate</h4>
+
+                <p class="publication__section__wraper__cards__card__data">April 22</p>
+
+                <p class="publication__section__wraper__cards__card__description">I'm a jun on projects. I am a co-owner
+                  of a law firm. How it happened. Before entering my parents told
+                  me that if I… </p>
+
+              </div>
+            </div>
+
+
+            <div class="publication__section__wraper__cards__card">
+
+              <img class="publication__section__wraper__cards__card__img" src="images/Publication-3.jpg" alt="">
+
+              <div class="publication__section__wraper__cards__card__wrap">
+                <h4 class="publication__section__wraper__cards__card__title">Millennial Testament</h4>
+
+                <p class="publication__section__wraper__cards__card__data">August 19</p>
+
+                <p class="publication__section__wraper__cards__card__description">What and how modern vloggers, opinion
+                  leaders and crypto-millionaires will inherit A typical legacy of the Ukrainian generation X looks like
+                  this: an apartment in…</p>
+
+              </div>
+            </div>
+
+            <div class="publication__section__wraper__cards__card">
+
+              <img class="publication__section__wraper__cards__card__img" src="images/Publication-2.jpg" alt="">
+
+              <div class="publication__section__wraper__cards__card__wrap">
+                <h4 class="publication__section__wraper__cards__card__title">Penalty for the Good Corporation: what will
+                  happen to Google and others for violating the GDPR</h4>
+
+                <p class="publication__section__wraper__cards__card__data">September 29</p>
+
+                <p class="publication__section__wraper__cards__card__description">And why the recovery of 50 million
+                  euros could be a fateful precedent According to Mind.ua January 21 National Commission for Data
+                  Protection.</p>
+
+              </div>
+            </div>
+            <div class="publication__section__wraper__cards__card">
+
+              <img class="publication__section__wraper__cards__card__img" src="images/Publication-4.jpg" alt="">
+
+              <div class="publication__section__wraper__cards__card__wrap">
+                <h4 class="publication__section__wraper__cards__card__title">Language Law: How to Make Your Website
+                  Relevant</h4>
+
+                <p class="publication__section__wraper__cards__card__data">August 19</p>
+
+                <p class="publication__section__wraper__cards__card__description">Natalia Kyryk, head of content studio
+                  Wordfactory.ua First, it's beautiful! This is the number one argument in favor of the
+                  Ukrainian-language site. Secondly, it is effective. IN…</p>
+
+              </div>
+            </div>
+
+            <div class="publication__section__wraper__cards__card">
+
+              <img class="publication__section__wraper__cards__card__img" src="" alt="">
+
+              <div class="publication__section__wraper__cards__card__wrap">
+                <h4 class="publication__section__wraper__cards__card__title">Currency control is dead, long live
+                  currency control!</h4>
+
+                <p class="publication__section__wraper__cards__card__data">June 14, 2018</p>
+
+                <p class="publication__section__wraper__cards__card__description">Experts hold conferences, round tables
+                  and other events on "liberalization of currency legislation." Lawyers-experts-novelists rub their
+                  fingers about "ctrl + c / ctrl + v".</p>
+
+              </div>
+            </div>
+            <div class="publication__section__wraper__cards__card">
+
+              <img class="publication__section__wraper__cards__card__img" src="images/Publication-5.jpg" alt="">
+
+              <div class="publication__section__wraper__cards__card__wrap">
+                <h4 class="publication__section__wraper__cards__card__title">Reimbursement of the child's tuition fees
+                  in kindergarten and school</h4>
+
+                <p class="publication__section__wraper__cards__card__data">February 5, 2018</p>
+
+                <p class="publication__section__wraper__cards__card__description">What we are talking about In June this
+                  year, the Verkhovna Rada amended the Tax Code of Ukraine. From now on, parents who receive an
+                  official…</p>
+
+              </div>
+            </div>
+
+          </div>
+
           <button class="publication__section__wraper__btn">
             More publications
           </button>
-
         </div>
+
+
+
+      </div>
       </div>
 
     </section>
@@ -263,6 +374,31 @@
       </div>
     </div>
   </footer>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      function radio() {
+        const cards = document.getElementById('cards');
+        const cards2 = document.getElementById('cards2');
+        const option1 = document.getElementById('option1');
+
+        if (option1.checked) {
+          cards.classList.add('opacity');
+          cards2.classList.remove('opacity');
+        } else {
+          cards2.classList.add('opacity');
+          cards.classList.remove('opacity');
+        }
+      }
+
+      document.getElementById('option1').addEventListener('change', radio);
+      document.getElementById('option2').addEventListener('change', radio);
+
+      // run once on load
+      radio();
+
+    });</script>
+  <script src="https://code.jquery.com/jquery-4.0.0.js" integrity="sha256-9fsHeVnKBvqh3FB2HYu7g2xseAZ5MlN6Kz/qnkASV8U="
+    crossorigin="anonymous"></script>
   <script src="javascript/script.js"></script>
 </body>
 
