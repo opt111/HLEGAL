@@ -376,7 +376,7 @@ ul li::marker {
     width: 100vw;
     background-color: #e3e3ff;
     margin: 0;
-    z-index: 1;
+    z-index: 5;
     align-items: center;
     justify-content: center;
     gap: 60px;
@@ -1035,7 +1035,7 @@ ul li::marker {
 .publication__section .publication__section__wraper__cards {
   display: grid;
   gap: 30px;
-  grid-template-columns: repeat(3, minmax(250px, 1fr));
+  grid-template-columns: repeat(3, minmax(230px, 1fr));
   height: auto;
   visibility: 0;
   opacity: 0;
@@ -1044,7 +1044,7 @@ ul li::marker {
 }
 @media (max-width: 850px) {
   .publication__section .publication__section__wraper__cards {
-    grid-template-columns: repeat(2, minmax(250px, 1fr));
+    grid-template-columns: repeat(2, minmax(230px, 1fr));
   }
 }
 @media (max-width: 560px) {
@@ -1148,6 +1148,11 @@ ul li::marker {
 @media (max-width: 850px) {
   .publication__section .cards2 {
     top: 410px;
+  }
+}
+@media (max-width: 560px) {
+  .publication__section .cards2 {
+    top: 285px;
   }
 }
 .publication__section .cards1,

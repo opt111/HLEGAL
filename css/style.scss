@@ -354,7 +354,7 @@ ul {
         width: 100vw;
         background-color: #e3e3ff;
         margin: 0;
-        z-index: 1;
+        z-index: 5;
         align-items: center;
         justify-content: center;
         gap: 60px;
@@ -1139,7 +1139,7 @@ ul {
     &__cards {
       display: grid;
       gap: 30px;
-      grid-template-columns: repeat(3, minmax(250px, 1fr));
+      grid-template-columns: repeat(3, minmax(230px, 1fr));
       height: auto;
       visibility: 0;
       opacity: 0;
@@ -1147,7 +1147,7 @@ ul {
       position: relative;
 
       @media (max-width: 850px) {
-        grid-template-columns: repeat(2, minmax(250px, 1fr));
+        grid-template-columns: repeat(2, minmax(230px, 1fr));
       }
 
       @media (max-width: 560px) {
@@ -1271,6 +1271,10 @@ ul {
     @media (max-width:850px) {
       top: 410px;
     }
+
+    @media (max-width:560px) {
+      top: 285px;
+    }
   }
 
   .cards1,
@@ -1288,6 +1292,7 @@ ul {
     z-index: 2;
   }
 }
-#option1:checked ~ #cards {
+
+#option1:checked~#cards {
   opacity: 1;
 }
