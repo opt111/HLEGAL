@@ -34,6 +34,7 @@ a {
 }
 a:hover {
   color: #F0145A;
+  text-decoration: none;
 }
 a {
   transition: all 0.3s linear;

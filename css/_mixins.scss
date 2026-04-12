@@ -18,7 +18,7 @@
   line-height: 100%;
 }
 
-@mixin h3 {
+@mixin h3(){
   font-family: $ff;
   color: $main-color;
   font-weight: 700;
@@ -96,6 +96,7 @@
 
   &:hover {
     color: $accent-color;
+    text-decoration: none;
   }
 }
 
