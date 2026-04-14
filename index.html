@@ -12,9 +12,10 @@
 
   <link rel="stylesheet" type="text/css"
     href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css" />
+     <link rel="stylesheet" href="css/media.css">
   <link rel="stylesheet" href="css/stylesheet.css">
   <link rel="stylesheet" href="css/services.css">
-  <link rel="stylesheet" href="css/media.css">
+ 
 </head>
 
 <body>
@@ -22,7 +23,7 @@
     <div class="header">
       <div class="container -header">
         <div class="header-left_wrap">
-          <div class="header-left">
+          <div class="header-left header-left-home">
             <div class="logo-wrap">
               <a href="index.html"><img src="images/Logo-white.png" alt="Hlegal logo" class="header-left__logo"></a>
               <span class="header-left__slash"><img src="images/Slash.svg" alt=""></span>
@@ -34,7 +35,7 @@
           </div>
         </div>
         <div class="header-right">
-          <div class="header-right__top">
+          <div class="header-right__top header-right__top__home">
             <div class="header-right__top__languages">
               <div class="header-right__top__languages__radio">
                 <input type="radio" id="ua" name="group1" value="ua" />
@@ -100,7 +101,7 @@
         <span></span>
 
         <h2 class="home__hero__section__info__title">you legal solutions provider</h2>
-        <a href="#v-pills-tab" class="home__hero__section__info__scroll">
+        <a href="#tab-scroll" class="home__hero__section__info__scroll">
           <svg width="42" height="42" viewBox="0 0 42 42" fill="none" xmlns="http://www.w3.org/2000/svg">
             <g clip-path="url(#clip0_22728_11339)">
               <circle opacity="0.5" cx="21" cy="21" r="20" stroke="white" stroke-width="2" />
@@ -119,53 +120,59 @@
     </section>
 
     <div class="tabs-container">
-      <div class="d-flex align-items-start tabs">
-        <div class="nav flex-column nav-pills me-3" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+      <div id="tab-scroll">
+        <div class="d-flex align-items-start tabs">
+          <div class="nav flex-column nav-pills me-3" id="v-pills-tab" role="tablist" aria-orientation="vertical">
 
-          <button class="nav-link active" id="v-pills-home-tab" data-bs-toggle="pill" data-bs-target="#v-pills-home"
-            type="button" role="tab" aria-controls="v-pills-home" aria-selected="true">Consistent</button>
+            <button class="nav-link active" id="v-pills-home-tab" data-bs-toggle="pill" data-bs-target="#v-pills-home"
+              type="button" role="tab" aria-controls="v-pills-home" aria-selected="true">Consistent</button>
 
-          <button class="nav-link" id="v-pills-profile-tab" data-bs-toggle="pill" data-bs-target="#v-pills-profile"
-            type="button" role="tab" aria-controls="v-pills-profile" aria-selected="false">Customer oriented</button>
+            <button class="nav-link" id="v-pills-profile-tab" data-bs-toggle="pill" data-bs-target="#v-pills-profile"
+              type="button" role="tab" aria-controls="v-pills-profile" aria-selected="false">Customer oriented</button>
 
-          <button class="nav-link" id="v-pills-messages-tab" data-bs-toggle="pill" data-bs-target="#v-pills-messages"
-            type="button" role="tab" aria-controls="v-pills-messages" aria-selected="false">Innovative</button>
+            <button class="nav-link" id="v-pills-messages-tab" data-bs-toggle="pill" data-bs-target="#v-pills-messages"
+              type="button" role="tab" aria-controls="v-pills-messages" aria-selected="false">Innovative</button>
 
-          <button class="nav-link" id="v-pills-settings-tab" data-bs-toggle="pill" data-bs-target="#v-pills-settings"
-            type="button" role="tab" aria-controls="v-pills-settings" aria-selected="false">Business oriented</button>
+            <button class="nav-link" id="v-pills-settings-tab" data-bs-toggle="pill" data-bs-target="#v-pills-settings"
+              type="button" role="tab" aria-controls="v-pills-settings" aria-selected="false">Business oriented</button>
+          </div>
+          <div class="tab-content " id="v-pills-tabContent">
+            <div class="tab-pane fade show active" id="v-pills-home" role="tabpanel" aria-labelledby="v-pills-home-tab">
+              <h2>We turn the idea of legal services</h2><br>
+              <p>Consolidating many years of experience and practice, the company's lawyers accompany complex projects
+                and
+                achieve a number of important decisions for the industry. Many of them form the practice of applying the
+                law
+                of the sea in Ukraine.</p>
+            </div>
+            <div class="tab-pane fade" id="v-pills-profile" role="tabpanel" aria-labelledby="v-pills-profile-tab">
+              <h2>We turn the idea of legal services1</h2><br>
+              <p>Consolidating many years of experience and practice, the company's lawyers accompany complex projects
+                and
+                achieve a number of important decisions for the industry. Many of them form the practice of applying the
+                law
+                of the sea in Ukraine.1</p>
+            </div>
+            <div class="tab-pane fade" id="v-pills-messages" role="tabpanel" aria-labelledby="v-pills-messages-tab">
+              <h2>We turn the idea of legal services2</h2><br>
+              <p>Consolidating many years of experience and practice, the company's lawyers accompany complex projects
+                and
+                achieve a number of important decisions for the industry. Many of them form the practice of applying the
+                law
+                of the sea in Ukraine.2</p>
+            </div>
+            <div class="tab-pane fade" id="v-pills-settings" role="tabpanel" aria-labelledby="v-pills-settings-tab">
+              <h2>We turn the idea of legal services3</h2><br>
+              <p>Consolidating many years of experience and practice, the company's lawyers accompany complex projects
+                and
+                achieve a number of important decisions for the industry. Many of them form the practice of applying the
+                law
+                of the sea in Ukraine.3</p>
+            </div>
+          </div>
+
+
         </div>
-        <div class="tab-content" id="v-pills-tabContent">
-          <div class="tab-pane fade show active" id="v-pills-home" role="tabpanel" aria-labelledby="v-pills-home-tab">
-            <h2>We turn the idea of legal services</h2><br>
-            <p>Consolidating many years of experience and practice, the company's lawyers accompany complex projects and
-              achieve a number of important decisions for the industry. Many of them form the practice of applying the
-              law
-              of the sea in Ukraine.</p>
-          </div>
-          <div class="tab-pane fade" id="v-pills-profile" role="tabpanel" aria-labelledby="v-pills-profile-tab">
-            <h2>We turn the idea of legal services1</h2><br>
-            <p>Consolidating many years of experience and practice, the company's lawyers accompany complex projects and
-              achieve a number of important decisions for the industry. Many of them form the practice of applying the
-              law
-              of the sea in Ukraine.1</p>
-          </div>
-          <div class="tab-pane fade" id="v-pills-messages" role="tabpanel" aria-labelledby="v-pills-messages-tab">
-            <h2>We turn the idea of legal services2</h2><br>
-            <p>Consolidating many years of experience and practice, the company's lawyers accompany complex projects and
-              achieve a number of important decisions for the industry. Many of them form the practice of applying the
-              law
-              of the sea in Ukraine.2</p>
-          </div>
-          <div class="tab-pane fade" id="v-pills-settings" role="tabpanel" aria-labelledby="v-pills-settings-tab">
-            <h2>We turn the idea of legal services3</h2><br>
-            <p>Consolidating many years of experience and practice, the company's lawyers accompany complex projects and
-              achieve a number of important decisions for the industry. Many of them form the practice of applying the
-              law
-              of the sea in Ukraine.3</p>
-          </div>
-        </div>
-
-
       </div>
     </div>
 
@@ -184,7 +191,7 @@
 
           <h1 class="services__hero__section__info__title">What can we do better than others?</h1>
 
-          <div class="services__hero__section__info__cards services__hero__section__info__cards__after">
+          <div class="services__hero__section__info__cards ">
             <div class="services__hero__section__info__cards__card">
               <a href="service-entry.html">
                 <img src="images/Ecommerce.svg" alt="" class="services__hero__section__info__cards__card__img">
@@ -274,7 +281,7 @@
 
   <section class="home__second">
 
-    <div class="container ">
+    <div class="container-carousel">
 
       <div class="home__second__carousel">
 
@@ -379,7 +386,7 @@
   </section>
 
   <section class="partner__section partner__section__home">
-    <div class="partner__section__home__container">
+    <div class="container-wide">
       <h3 class="partner__section__title">They already trust us</h3>
       <div class="partner__section__partners">
         <a href="https://ithillel.ua/"><img src="images/hillel.png" alt=""
@@ -469,7 +476,7 @@
       </div>
     </div>
   </section>
-  <footer class="footer" style="padding-inline: 2rem;">
+  <footer class="footer home-footer" style="padding-inline: 2rem;">
     <div class="container">
       <div class="footer__wrap">
         <div class="footer__wrap__left">
@@ -521,14 +528,58 @@
   <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
 
   <script>
-    $(".home__second__carousel").slick({
+    $('.home__second__carousel').slick({
       dots: true,
-      infinite: true,
-      speed: 500,
       slidesToShow: 1,
-      slidesToScroll: 1
+      slidesToScroll: 1,
+      centerMode: false,
+      variableWidth: false
     });
 
+    $(window).on('resize', function () {
+      $('.home__second__carousel').slick('setPosition');
+    });
+
+    document.addEventListener('DOMContentLoaded', () => {
+      document.querySelectorAll('a[href^="#"]').forEach(link => {
+        link.addEventListener('click', function (e) {
+          const targetId = this.getAttribute('href');
+          const target = document.querySelector(targetId);
+
+          if (!target) return;
+
+          e.preventDefault();
+
+          const offset = 100;
+          const start = window.pageYOffset;
+          const end = target.getBoundingClientRect().top + window.pageYOffset - offset;
+
+          const distance = end - start;
+          const duration = 800; // ⬅️ швидкість
+          let startTime = null;
+
+          function animationScroll(currentTime) {
+            if (!startTime) startTime = currentTime;
+
+            const timeElapsed = currentTime - startTime;
+            const progress = Math.min(timeElapsed / duration, 1);
+
+            // easing (smooth acceleration/deceleration)
+            const ease = progress < 0.5
+              ? 2 * progress * progress
+              : 1 - Math.pow(-2 * progress + 2, 2) / 2;
+
+            window.scrollTo(0, start + distance * ease);
+
+            if (timeElapsed < duration) {
+              requestAnimationFrame(animationScroll);
+            }
+          }
+
+          requestAnimationFrame(animationScroll);
+        });
+      });
+    });
   </script>
 </body>
 

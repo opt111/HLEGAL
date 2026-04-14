@@ -78,7 +78,7 @@
         margin-bottom: 30px;
         align-items: center;
 
-
+        padding-inline: 20px;
       }
     }
 
@@ -197,6 +197,7 @@
       padding: 13px 15px;
       background-color: rgba(245, 245, 250, 0.2);
       justify-content: space-between;
+      padding-inline: 10px;
     }
 
     .header-right__top>*:not(.header-right__top__languages, .header-right__top__number) {
