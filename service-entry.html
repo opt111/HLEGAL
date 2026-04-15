@@ -10,7 +10,7 @@
   <link rel="stylesheet" href="css/media.css">
 </head>
 
-<body>
+<body id="body" class="">
   <header id="entry-header">
     <div class="header header__service__entry">
       <div class="container -header">
@@ -262,31 +262,40 @@
       </div>
     </div>
   </footer>
+  <script src="javascript/script.js"></script>
   <script>
-    const popup = document.getElementById('popup');
-    const popupBtn = document.getElementById('popup-btn');
-    const entryHeader = document.getElementById('entry-header');
-    const popupClose = document.getElementById('popup-close');
-
-    popupClose.addEventListener('click', function (event) {
-      if (event.target === this) {
-        popup.classList.toggle('popup-active');
-        entryHeader.style.zIndex = '1';
-      }
-    });
-
-    popup.addEventListener('click', function (event) {
-      if (event.target === this) {
-        popup.classList.toggle('popup-active');
-        entryHeader.style.zIndex = '1';
-      }
-    });
+    // const popup = document.getElementById('popup');
+    // const popupBtn = document.getElementById('popup-btn');
+    // const entryHeader = document.getElementById('entry-header');
+    // const popupClose = document.getElementById('popup-close');
+    // const body = document.getElementById('body')
 
 
-    popupBtn.addEventListener('click', function () {
-      popup.classList.toggle('popup-active');
-      entryHeader.style.zIndex = '0';
-    });
+    // popupClose.addEventListener('click', function (event) {
+    //   if (event.target === this) {
+    //     popup.classList.toggle('popup-active');
+    //     entryHeader.style.zIndex = '1';
+    //     body.classList.remove('popup-body-overflow-hidden');
+    //   }
+    // });
+
+
+
+    // popup.addEventListener('click', function (event) {
+    //   if (event.target === this) {
+    //     popup.classList.toggle('popup-active');
+    //     entryHeader.style.zIndex = '1';
+    //     body.classList.remove('popup-body-overflow-hidden');
+    //   }
+    // });
+
+
+    // popupBtn.addEventListener('click', function () {
+
+    //   popup.classList.toggle('popup-active');
+    //   entryHeader.style.zIndex = '0';
+    //   body.classList.add('popup-body-overflow-hidden');
+    // });
   </script>
   <script src="https://code.jquery.com/jquery-4.0.0.js" integrity="sha256-9fsHeVnKBvqh3FB2HYu7g2xseAZ5MlN6Kz/qnkASV8U="
     crossorigin="anonymous"></script>

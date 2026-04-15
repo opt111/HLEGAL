@@ -18,6 +18,7 @@ body {
   position: relative;
   display: flex;
   flex-direction: column;
+  overflow-x: hidden;
 }
 
 main {
@@ -182,6 +183,7 @@ ul li::marker {
 }
 @media (max-width: 850px) and (max-width: 560px) {
   .header-left_wrap .header-left {
+    padding-bottom: 10px;
     margin-bottom: 0;
   }
 }
@@ -228,7 +230,7 @@ ul li::marker {
 @media (max-width: 560px) {
   .header .header-right__top {
     margin-bottom: 15px;
-    width: 98vw;
+    width: 100vw;
     position: relative;
     left: 50%;
     right: 50%;
@@ -253,7 +255,6 @@ ul li::marker {
 .header .header-right__top__languages__radio input:checked + .header-right__top__languages__radio__item {
   background-color: #F0145A;
   color: white;
-  border-radius: 8px;
 }
 .header .header-right__top__languages__radio__item {
   font-family: Montserrat, sans-serif;
@@ -266,6 +267,7 @@ ul li::marker {
   transition: all 0.3s linear;
   padding: 5px 7px;
   font-size: 13px;
+  border-radius: 8px;
 }
 .header .header-right__top__languages__radio__item:not(.header-right__top__languages__radio__item-active):hover {
   cursor: pointer;
@@ -325,7 +327,7 @@ ul li::marker {
   position: absolute;
   display: none;
   top: 65px;
-  right: 40px;
+  right: 50px;
   width: 20px;
   height: 20px;
 }
@@ -981,6 +983,11 @@ ul li::marker {
   background-color: #F5F5FA;
   margin-top: 60px;
 }
+@media (max-width: 560px) {
+  .publication__main {
+    margin-top: 0px;
+  }
+}
 
 .publication__section {
   height: 100%;
@@ -1153,13 +1160,12 @@ ul li::marker {
 }
 @media (max-width: 560px) {
   .publication__section .cards2 {
-    top: 285px;
+    top: 237px;
   }
 }
 .publication__section .cards1,
 .publication__section .cards2 {
   opacity: 0;
-  transform: translateY(10px);
   transition: opacity 0.4s ease, transform 0.4s ease;
   pointer-events: none;
 }
@@ -1172,4 +1178,9 @@ ul li::marker {
 
 #option1:checked ~ #cards {
   opacity: 1;
+}
+
+.popup-body-overflow-hidden {
+  overflow: hidden;
+  height: calc(100vh + 1px);
 }/*# sourceMappingURL=style.css.map */
