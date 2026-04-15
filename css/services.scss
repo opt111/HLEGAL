@@ -131,8 +131,6 @@ ul {
   border-radius: 0 0 12px 12px;
 }
 
-
-
 .main-gradient::before {
   top: calc(100% - 10px);
   z-index: -1;
@@ -277,8 +275,6 @@ ul {
   }
 }
 
-
-
 .header {
   position: absolute;
   top: 0;
@@ -399,7 +395,7 @@ ul {
         position: absolute;
         display: none;
         top: 80px;
-        right: 60px;
+        right: 40px;
         width: 20px;
         height: 20px;
 
@@ -831,7 +827,6 @@ footer {
   }
 
 }
-
 
 .entry__hero_upper {
   display: flex;
