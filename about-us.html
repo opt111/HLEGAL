@@ -90,6 +90,7 @@
   </header>
 
   <main>
+
     <div class="container">
       <section class="about-us-first-section">
         <div class="container-short">
@@ -138,74 +139,80 @@
           </div>
         </div>
       </section>
-    </div>
 
-    <section class="about-us-first-team">
-      <img src="images/about-us-teamimg.png" alt="">
-      <span>TEAM</span>
-    </section>
 
-    <div class="container-short">
-      <section class="about-us-quality-section">
-        <div class="about-us-quality-section__left">
-          <p>The historically unchanged legal profession has begun to reformat in recent years. Clients are feeling
-            this, but law firms are still resisting evolution. Clients need convenience, simplicity, transparent
-            payment. Google, IBM WatsOn, Symantec Clearwell prove that the technological revolution in legal services
-            has begun and is imminent.</p>
-          <p>Quality is what we care about the most.</p>
-          <p>It's simple. If you are unhappy with our work, we will refund your money. We trust our clients. And we want
-            our clients to trust us too.</p>
-        </div>
-
-        <div class="about-us-quality-section__right">
-          <h1>Quality is what we care about the most.</h1>
-        </div>
+      <section class="about-us-first-team">
+        <img src="images/about-us-teamimg.png" alt="">
+        <span>TEAM</span>
       </section>
+
+      <div class="container-short-nopadding">
+        <section class="about-us-quality-section">
+          <div class="about-us-quality-section__left">
+            <p>The historically unchanged legal profession has begun to reformat in recent years. Clients are feeling
+              this, but law firms are still resisting evolution. Clients need convenience, simplicity, transparent
+              payment. Google, IBM WatsOn, Symantec Clearwell prove that the technological revolution in legal services
+              has begun and is imminent.</p>
+            <p>Quality is what we care about the most.</p>
+            <p>It's simple. If you are unhappy with our work, we will refund your money. We trust our clients. And we
+              want
+              our clients to trust us too.</p>
+          </div>
+
+          <div class="about-us-quality-section__right">
+            <h1>Quality is what we care about the most.</h1>
+          </div>
+        </section>
+      </div>
+
+
+
+
     </div>
 
-    <div class="container" style="max-width: calc(1600px + 40px);">
-      <div class="about-us-carousel">
-        <h3 class="about-us-carousel__title">achievements</h3>
-        <div class="owl-carousel owl-theme">
-          <div class="item">
-            <img src="images/about-us-carousel-img1.png" alt="" class="carousel-item1">
-          </div>
-          <div class="item">
-            <img src="images/about-us-carousel-img2.png" alt="" class="carousel-item2">
-          </div>
-          <div class="item">
-            <img src="images/about-us-carousel-img3.png" alt="" class="carousel-item3">
-          </div>
-          <div class="item">
-            <img src="images/about-us-carousel-img4.png" alt="" class="carousel-item4">
-          </div>
-           <div class="item">
-            <img src="images/about-us-carousel-img1.png" alt="" class="carousel-item1">
-          </div>
-          <div class="item">
-            <img src="images/about-us-carousel-img2.png" alt="" class="carousel-item2">
-          </div>
-          <div class="item">
-            <img src="images/about-us-carousel-img3.png" alt="" class="carousel-item3">
-          </div>
-          <div class="item">
-            <img src="images/about-us-carousel-img4.png" alt="" class="carousel-item4">
-          </div>
-           <div class="item">
-            <img src="images/about-us-carousel-img1.png" alt="" class="carousel-item1">
-          </div>
-          <div class="item">
-            <img src="images/about-us-carousel-img2.png" alt="" class="carousel-item2">
-          </div>
-          <div class="item">
-            <img src="images/about-us-carousel-img3.png" alt="" class="carousel-item3">
-          </div>
-          <div class="item">
-            <img src="images/about-us-carousel-img4.png" alt="" class="carousel-item4">
+    <div class="carousel-section-bg">
+      <div class="container-carousel">
+        <div class="about-us-carousel">
+          <h3 class="about-us-carousel__title">achievements</h3>
+          <div class="owl-carousel owl-theme">
+            <div class="item">
+              <img src="images/about-us-carousel-img1.png" alt="" class="carousel-item1">
+            </div>
+            <div class="item">
+              <img src="images/about-us-carousel-img2.png" alt="" class="carousel-item2">
+            </div>
+            <div class="item">
+              <img src="images/about-us-carousel-img3.png" alt="" class="carousel-item3">
+            </div>
+            <div class="item">
+              <img src="images/about-us-carousel-img4.png" alt="" class="carousel-item4">
+            </div>
+            <div class="item">
+              <img src="images/about-us-carousel-img1.png" alt="" class="carousel-item1">
+            </div>
+            <div class="item">
+              <img src="images/about-us-carousel-img2.png" alt="" class="carousel-item2">
+            </div>
+            <div class="item">
+              <img src="images/about-us-carousel-img3.png" alt="" class="carousel-item3">
+            </div>
+            <div class="item">
+              <img src="images/about-us-carousel-img4.png" alt="" class="carousel-item4">
+            </div>
+            <div class="item">
+              <img src="images/about-us-carousel-img1.png" alt="" class="carousel-item1">
+            </div>
+            <div class="item">
+              <img src="images/about-us-carousel-img2.png" alt="" class="carousel-item2">
+            </div>
+            <div class="item">
+              <img src="images/about-us-carousel-img3.png" alt="" class="carousel-item3">
+            </div>
+            <div class="item">
+              <img src="images/about-us-carousel-img4.png" alt="" class="carousel-item4">
+            </div>
           </div>
         </div>
-
-
       </div>
     </div>
   </main>
@@ -263,12 +270,24 @@
     });
 
     $('.owl-carousel').owlCarousel({
+
       items: 4,
       loop: true,
-      margin:40,
+      margin: 40,
       dots: true,
-      // center:true,
+      
       responsive: {
+        0: {
+center:true,  
+          items: 1,
+          dotsEach: 2,
+          
+        },
+        561: {
+
+          items: 4,
+          // centre:true,
+        }
 
       }
     });
