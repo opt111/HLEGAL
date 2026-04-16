@@ -1,3 +1,5 @@
+
+
 const menu = document.querySelector('.header-right__links');
 const burger = document.querySelector('.header-left__burger__div__svg')
 const Close = document.querySelector('.close-icon');
@@ -19,3 +21,34 @@ Close.addEventListener('click', function () {
 
 
 
+const popup = document.getElementById('popup');
+const popupBtn = document.getElementById('popup-btn');
+const entryHeader = document.getElementById('entry-header');
+const popupClose = document.getElementById('popup-close');
+
+
+popupClose.addEventListener('click', function (event) {
+  if (event.target === this) {
+    popup.classList.toggle('popup-active');
+    entryHeader.style.zIndex = '1';
+    body.classList.remove('popup-body-overflow-hidden');
+  }
+});
+
+
+
+popup.addEventListener('click', function (event) {
+  if (event.target === this) {
+    popup.classList.toggle('popup-active');
+    entryHeader.style.zIndex = '1';
+    body.classList.remove('popup-body-overflow-hidden');
+  }
+});
+
+
+popupBtn.addEventListener('click', function () {
+
+  popup.classList.toggle('popup-active');
+  entryHeader.style.zIndex = '0';
+  body.classList.add('popup-body-overflow-hidden');
+});

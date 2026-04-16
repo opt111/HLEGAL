@@ -122,6 +122,12 @@ ul li::marker {
   width: 100%;
   padding-inline: 60px;
 }
+@media (max-width: 560px) {
+  .container-short {
+    padding-inline: 0px;
+  }
+}
+
 .container {
   padding-inline: 20px;
   max-width: 1600px;
@@ -1648,13 +1654,13 @@ ul li::marker {
   background: rgb(36, 163, 255);
 }
 
-.owl-carousel .owl-stage {
-  transform: translate3d(-5623px, 0px, 0px);
-  transition: 0.25s;
-}
-
 .owl-carousel.owl-drag .owl-item {
   max-width: 370px;
+}
+@media (max-width: 375px) {
+  .owl-carousel.owl-drag .owl-item {
+    max-width: 255px;
+  }
 }
 
 .container-short-nopadding {
@@ -1692,7 +1698,6 @@ ul li::marker {
 
 .owl-carousel .owl-stage {
   width: 100%;
-  padding-left: 0px;
   height: -moz-max-content;
   height: max-content;
 }/*# sourceMappingURL=style.css.map */

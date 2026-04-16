@@ -5,9 +5,9 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>IT and e-commerce</title>
-  <link rel="stylesheet" href="css/stylesheet.css">
-  <link rel="stylesheet" href="css/services.css">
-  <link rel="stylesheet" href="css/media.css">
+  <link rel="stylesheet" href="../../css/stylesheet.css">
+  <link rel="stylesheet" href="../../css/services.css">
+  <link rel="stylesheet" href="../../css/media.css">
   
 </head>
 
@@ -18,12 +18,12 @@
         <div class="header-left_wrap">
           <div class="header-left">
             <div class="logo-wrap">
-              <a href="index.html"><img src="images/Logo-white.png" alt="Hlegal logo" class="header-left__logo"></a>
-              <span class="header-left__slash"><img src="images/Slash.svg" alt=""></span>
+              <a href="../../index.html"><img src="../../images/Logo-white.png" alt="Hlegal logo" class="header-left__logo"></a>
+              <span class="header-left__slash"><img src="../../images/Slash.svg" alt=""></span>
               <span class="header-left__page-name">services</span>
             </div>
             <div class="header-left__burger__div">
-              <img src="images/Hamburger-white.svg" alt="" class="header-left__burger__div__svg">
+              <img src="../../images/Hamburger-white.svg" alt="" class="header-left__burger__div__svg">
             </div>
           </div>
         </div>
@@ -67,7 +67,7 @@
         </div>
         <div class="header-right__links">
           <?xml version="1.0" encoding="iso-8859-1"?>
-          <svg class="close-icon" fill="#323264" height="800px" width="800px" version="1.1" id="Layer_1"
+          <svg style="right: 55px;" class="close-icon" fill="#323264" height="800px" width="800px" version="1.1" id="Layer_1"
             xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 512 512"
             xml:space="preserve">
             <g>
@@ -77,11 +77,11 @@
               </g>
             </g>
           </svg>
-          <a href="about-us.html" class="header-right__links__item">about us</a>
-          <a href="services.html" class="header-right__links__item header-right__links__item-active">services</a>
-          <a href="team.html" class="header-right__links__item">team</a>
-          <a href="publication.html" class="header-right__links__item">publications</a>
-          <a href="contact.html" class="header-right__links__item">contact</a>
+          <a href="../../pages/about-us/" class="header-right__links__item">about us</a>
+          <a href="index.html" class="header-right__links__item header-right__links__item-active">services</a>
+          <a href="../../pages/team/" class="header-right__links__item">team</a>
+          <a href="../../pages/publication/" class="header-right__links__item">publications</a>
+          <a href="../../pages/contact/" class="header-right__links__item">contact</a>
         </div>
       </div>
 
@@ -94,7 +94,7 @@
 
           <div class="entry__hero_upper">
             <img class="services__hero__section__info__cards__card__img" style="margin-top: 60px;"
-              src="images/Ecommerce.svg" alt="">
+              src="../../images/Ecommerce.svg" alt="">
             <h1 class="entry__hero_upper__title" style="margin-bottom: 28px;">IT and e-commerce</h1>
             <p class="entry__hero_upper__description" style="margin-bottom: 28px;">An endless stream of contracts, tax
               issues, labor relations, corporate papers - legal work distracts you from doing business. But there is not
@@ -137,7 +137,7 @@
           <div class="form__section__right">
             <form action="" class="form__section__right__form">
               <h1 class="form__section__right__form__title" data-key="would">We would like to help you</h1>
-              <img class="form__section__right__form__close" src="images/popupclose.svg" alt="Close" id="popup-close">
+              <img class="form__section__right__form__close" src="../../images/popupclose.svg" alt="Close" id="popup-close">
               <div class="form__section__right__form__first-group">
                 <input type="text" name="name" id="name" required placeholder="Name"
                   class="form__section__right__form__name">
@@ -175,7 +175,7 @@
       <div class="recommended__section__cards">
         <div class="recommended__section__cards__card">
          <a href="publication-page.html">
-           <img class="recommended__section__cards__card__img" src="images/recommended__section_card1.png" alt="">
+           <img class="recommended__section__cards__card__img" src="../../images/recommended__section_card1.png" alt="">
           <div class="recommended__section__cards__card__container">
 
 
@@ -191,7 +191,7 @@
 
         <div class="recommended__section__cards__card">
           <a href="publication-page.html">
-            <img class="recommended__section__cards__card__img" src="images/recommended__section_card2.png" alt="">
+            <img class="recommended__section__cards__card__img" src="../../images/recommended__section_card2.png" alt="">
           <div class="recommended__section__cards__card__container">
 
 
@@ -208,7 +208,7 @@
 
         <div class="recommended__section__cards__card">
           <a href="publication-page.html">
-            <img class="recommended__section__cards__card__img" src="images/recommended__section_card3.png" alt="">
+            <img class="recommended__section__cards__card__img" src="../../images/recommended__section_card3.png" alt="">
           <div class="recommended__section__cards__card__container">
 
 
@@ -269,43 +269,12 @@
       </div>
     </div>
   </footer>
+   <script src="../../javascript/script.js"></script>
   <script>
-    const popup = document.getElementById('popup');
-    const popupBtn = document.getElementById('popup-btn');
-    const entryHeader = document.getElementById('entry-header');
-    const popupClose = document.getElementById('popup-close');
-    const body = document.getElementById('body')
 
-
-    popupClose.addEventListener('click', function (event) {
-      if (event.target === this) {
-        popup.classList.toggle('popup-active');
-        entryHeader.style.zIndex = '1';
-        body.classList.remove('popup-body-overflow-hidden');
-      }
-    });
-
-
-
-    popup.addEventListener('click', function (event) {
-      if (event.target === this) {
-        popup.classList.toggle('popup-active');
-        entryHeader.style.zIndex = '1';
-        body.classList.remove('popup-body-overflow-hidden');
-      }
-    });
-
-
-    popupBtn.addEventListener('click', function () {
-
-      popup.classList.toggle('popup-active');
-      entryHeader.style.zIndex = '0';
-      body.classList.add('popup-body-overflow-hidden');
-    });
   </script>
-  <script src="https://code.jquery.com/jquery-4.0.0.js" integrity="sha256-9fsHeVnKBvqh3FB2HYu7g2xseAZ5MlN6Kz/qnkASV8U="
-    crossorigin="anonymous"></script>
-  <script src="javascript/script.js"></script>
+  <script src="//code.jquery.com/jquery-3.7.1.min.js"></script>
+ 
 </body>
 
 </html>
