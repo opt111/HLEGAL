@@ -249,8 +249,7 @@
 
             <span class="qwe"></span>
 
-            <a href="mailto:contact@forstudy.space"
-              class="footer__wrap__left__bottom__email">contact@forstudy.space</a>
+            <a href="mailto:contact@forstudy.space" class="footer__wrap__left__bottom__email">contact@forstudy.space</a>
 
           </div>
         </div>
@@ -270,44 +269,20 @@
       $(".owl-carousel").owlCarousel();
     });
 
-    // $('.owl-carousel').owlCarousel({
-    //   loop:true,
-    //   center:true,
-    //   items: 4,
-    //   margin: 40,
-    //   dots: true,
-    //   dotsEach: 4,
-
-    //   responsive: {
-    //     0: {
-
-    //       margin: 10,
-    //       items: 1,
-    //       dotsEach: 4,
-
-    //     },
-    //     561: {
-
-    //       items: 4,
-
-    //     }
-
-    //   }
-    // });
-
     $('.owl-carousel').owlCarousel({
-
+      
+      stagePadding: 0,
       items: 4,
-
+      loop: true,
       margin: 40,
       dots: true,
 
       responsive: {
         0: {
-  
+
           items: 1,
-          dotsEach: 4 ,
-        
+          dotsEach: 4,
+
         },
 
 
@@ -319,6 +294,8 @@
 
       }
     });
+
+
   </script>
 </body>
 
